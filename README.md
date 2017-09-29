@@ -1,2 +1,2 @@
-NeoVim　dotfiles 
+dotfiles (Neovim) 
 ==================
