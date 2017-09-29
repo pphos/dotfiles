@@ -1,0 +1,44 @@
+#必ずしも起動時に必要でないpluginを読み込む
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+#文字が入力されたときに読み込む
+on_event = 'InsertCharPre'
+hook_add = '''
+    " 起動時に開始
+    let g:deoplete#enable_at_startup = 1
+    " 入力からポップアップ表示までdelay
+    let g:deoplete#auto_complete_delay = 0
+    " 大文字と小文字を区別"
+    let g:deoplete#enable_smart_case = 1
+    " バッファから読み込む
+    let g:deoplete#file#enable_buffer_path = 1
+    " Tabで候補を選択
+    inoremap <expr><tab> pumvisible() ? "\<C-n>" :
+        \ neosnippet#expandable_or_jumpable() ?
+        \   "\<plug>(neosnippet_expand_or_jump)" : "\<tab>"
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_add = '''
+    " Plugin key-mappings
+    imap <c-k> <plug>(neosnippet_expand_or_jump)
+    smap <c-k> <plug>(neosnippet_expand_or_jump)
+    xmap <c-k> <plug>(neosnippet_expand_target)
+    if has('conceal')
+        set conceallevel=2 concealcursor=niv
+    endif
+    " Enable snipMate compatibility feature
+    let g:neosnippet#enable_snipmate_compativility = 1
+'''
+
+#toml syntax
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+

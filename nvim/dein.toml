@@ -1,0 +1,108 @@
+#起動に必ず読み込むpluginを記述する
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    map <C-e> :NERDTreeToggle<CR>
+'''
+
+# カーソル位置のコンテキストのftを判定するライブラリ
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# カーソル位置のコンテキストに合わせてftを切り替える
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+    " エラー行に表示するマーク
+    let g:ale_sign_error = '❌'
+    let g:ale_sign_warning = '⚠'
+    " エラー行にカーソルをあわせた際に表示されるメッセージフォーマット
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+    " エラー表示の列を常時表示
+    let g:ale_sign_column_always = 1
+
+    " ファイルを開いたときにlint実行
+    let g:ale_lint_on_enter = 1
+    " ファイルを保存したときにlint実行
+    let g:ale_lint_on_save = 1
+    " 編集中のlintはしない
+    let g:ale_lint_on_text_changed = 'never'
+
+    " エラー行にショートカットキーでジャンプする
+    nmap <silent> <C-j> <Plug>(ale_next_wrap)
+    nmap <silent> <C-k> <Plug>(ale_next_previous_wrap)
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    set laststatus=2
+    let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ 'active': {
+        \   'left': [
+        \       ['mode', 'paste'],
+        \       ['readonly', 'filename', 'modified'],
+        \       ['ale'],
+        \   ]
+        \ },
+        \ 'component_function': {
+        \   'ale': 'ALEStatus',
+        \}
+    \}
+    let g:lightline.separator = { 'left': "\ue0b0", 'right': "\ue0b2"}
+    let g:lightline.subseparator = { 'left': "\ue0b1", 'right': "\ue0b3"}
+    function! ALEStatus()
+        return ALEGetStatusLine()
+    endfunction
+'''
+
+# virtual terminal mode
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+    let g:neoterm_position = 'horizontal'
+    " start neoterm
+    nnoremap <silent> tt :Tnew<CR><C-w>j
+    " change to command mode
+    tnoremap <silent> <esc> <c-\><c-n>
+    tnoremap <silent> <c-[> <c-\><c-n>
+    " hide/close terminal
+    nnoremap <silent> th :call neoterm#close()<CR>
+    " clear terminal
+    nnoremap <silent> tl :call neoterm#clear()<CR>
+    " kills the current job
+    vnoremap <silent> tk :call neoterm#kill()<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    nmap <silent> <c-u><c-b> :<C-u>Denite buffer<CR>
+    nmap <silent> <c-u><c-f> :<C-u>Denite filetype<CR>
+    nmap <silent> <c-u><c-p> :<C-u>Denite file_rec<CR>
+    nmap <silent> <c-u><c-l> :<C-u>Denite line<CR>
+    nmap <silent> <c-u><c-g> :<C-u>Denite grep<CR>
+    nmap <silent> <c-u><c-u> :<C-u>Denite file_mru<CR>
+    nmap <silent> <c-u><c-y> :<C-u>Denite neoyank<CR>
+'''
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+    set background=dark
+    colorscheme hybrid
+    autocmd Colorscheme * highlight Comment ctermfg=14
+'''
