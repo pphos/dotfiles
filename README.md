@@ -17,4 +17,4 @@ $ ~/.dotfiles/init_neovim.sh
 
 ## NOTE
 [lightline.vim](https://github.com/itchyny/lightline.vim)でセパレータに特殊フォントを使う場合は.fonts内のPowerlineパッチを当てたRictyフォントをインストールして、ターミナルにそのフォントを設定すると、セパレータの特殊文字が反映される。  
-(元々~/.fontsがない場合は、`init_neovim.sh`の実行で使用できる)
+(元々~/.fontsがない場合は、`init_neovim.sh`の実行でフォントがインストールされる)
