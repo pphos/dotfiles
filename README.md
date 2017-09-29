@@ -1,2 +1,2 @@
-NeoVim用dotfiles  
+NeoVim　dotfiles 
 ==================
