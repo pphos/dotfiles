@@ -82,3 +82,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "clip board
 set clipboard+=unnamedplus
+
+"colorscheme
+set background=dark
+colorscheme hybrid
+autocmd Colorscheme * highlight Comment ctermfg=14
