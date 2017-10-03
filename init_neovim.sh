@@ -3,7 +3,6 @@
 # install Neovim
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo apt-get update
 sudo apt update
 sudo apt -y install neovim
 mkdir -p ~/.config/nvim/
