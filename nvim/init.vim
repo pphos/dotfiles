@@ -51,6 +51,10 @@ endif
 " setting
 " 編集中ファイルが変更されたら自動で読み直す
 set autoread
+" ファイル編集中にスワップファイルを作らない
+set noswapfile
+" バックアップファイルを作らない
+set nobackup
 
 " Visual
 " 行番号を表示
