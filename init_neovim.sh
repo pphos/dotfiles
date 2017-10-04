@@ -13,6 +13,8 @@ sudo apt-get -y install xsel
 # install python3
 if ! type python3 > /dev/null; then
 	sudo apt-get -y install python-dev python-pip python3-dev python3-pip
+elif ! type pip3 > /dev/null; then
+    sudo apt -y install python3-pip
 fi
 pip install --upgrade neovim
 pip3 install --upgrade neovim
