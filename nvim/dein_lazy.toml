@@ -41,6 +41,7 @@ hook_add = '''
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+#### python setting ####
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_i = 1
@@ -49,3 +50,16 @@ on_ft = 'python'
 [[plugins]]
 repo = 'Vimjas/vim-python-pep8-indent'
 on_ft = 'python'
+
+
+#### HTML CSS setting ####
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_i = 1
+hook_source = '''
+    let g:user_emmet_settings = {
+        'html' : {
+            'indentation' : '  '
+        },
+    }
+'''
