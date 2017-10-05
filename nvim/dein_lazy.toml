@@ -13,6 +13,7 @@ hook_add = '''
     let g:deoplete#enable_smart_case = 1
     " バッファから読み込む
     let g:deoplete#file#enable_buffer_path = 1
+
     " Tabで候補を選択
     inoremap <expr><tab> pumvisible() ? "\<C-n>" :
         \ neosnippet#expandable_or_jumpable() ?
@@ -62,4 +63,18 @@ hook_source = '''
             'indentation' : '  '
         },
     }
+'''
+
+### PHP ####
+[[plugins]]
+repo = 'padawan-php/deoplete-padawan'
+depends = ['deoplete.nvim']
+on_ft = 'php'
+hook_source = '''
+    command! PadawanStart call deoplete#sources#padawan#StartServer()
+    command! PadawanStop call deoplete#sources#padawan#StopServer()
+    command! PadawanRestart call deoplete#sources#padawan#RestartServer()
+    command! PadawanInstall call deoplete#sources#padawan#InstallServer()
+    command! PadawanUpdate call deoplete#sources#padawan#UpdateServer()
+    command! -bang PadawanGenerate call deoplete#sources#padawan#Generate(<bang>0)
 '''
