@@ -72,6 +72,7 @@ hook_add = '''
 repo = 'kassio/neoterm'
 hook_add = '''
     let g:neoterm_position = 'horizontal'
+    let g:neoterm_size = '15'
     " start neoterm
     nnoremap <silent> tt :Tnew<CR><C-w>j
     " change to command mode
