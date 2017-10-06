@@ -98,6 +98,9 @@ hook_add = '''
     nmap <silent> <c-u><c-g> :<C-u>Denite grep<CR>
     nmap <silent> <c-u><c-u> :<C-u>Denite file_mru<CR>
     nmap <silent> <c-u><c-y> :<C-u>Denite neoyank<CR>
+    nmap <silent> <c-u><c-v> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/dotfiles']}])<CR>
 '''
+
+
 [[plugins]]
 repo = 'w0ng/vim-hybrid'

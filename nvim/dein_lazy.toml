@@ -37,6 +37,10 @@ hook_add = '''
     let g:neosnippet#enable_snipmate_compativility = 1
 '''
 
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
 #toml syntax
 [[plugins]]
 repo = 'cespare/vim-toml'
@@ -65,7 +69,7 @@ hook_source = '''
     }
 '''
 
-### PHP ####
+#### PHP ####
 [[plugins]]
 repo = 'padawan-php/deoplete-padawan'
 depends = ['deoplete.nvim']
