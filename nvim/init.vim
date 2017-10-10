@@ -74,7 +74,6 @@ set tabstop=4
 " 行頭でのTab文字の表示幅
 set shiftwidth=4
 " syntax indent
-syntax on
 filetype indent plugin on
 
 " Search
