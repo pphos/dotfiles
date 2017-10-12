@@ -10,7 +10,6 @@ augroup MyAutoCmd
     autocmd!
 augroup END
 
-autocmd FileType python setlocal completeopt-=preview
 
 " let g:python_host_prog = expand('~/.pyenv/versions/anaconda3-5.0.0/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/anaconda3-5.0.0/bin/python3.6')
