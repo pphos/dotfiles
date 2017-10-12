@@ -13,7 +13,6 @@ hook_add = '''
     let g:deoplete#enable_smart_case = 1
     " バッファから読み込む
     let g:deoplete#file#enable_buffer_path = 1
-
     " Tabで候補を選択
     inoremap <expr><tab> pumvisible() ? "\<C-n>" :
         \ neosnippet#expandable_or_jumpable() ?
@@ -49,9 +48,22 @@ on_ft = 'toml'
 #### python setting ####
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
-on_i = 1
+depends  = ['deoplete.nvim']
 on_ft = 'python'
 
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+hook_add = '''
+    let g:jedi#comletions_enabled = 0
+'''
+
+#[[plugins]]
+#repo = 'lambdalisue/vim-pyenv'
+#depends = ['deoplete-jedi']
+#on_ft = 'python'
+#
 [[plugins]]
 repo = 'Vimjas/vim-python-pep8-indent'
 on_ft = 'python'
