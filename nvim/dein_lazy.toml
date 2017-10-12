@@ -40,13 +40,13 @@ hook_source = '''
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-#toml syntax
+#### toml ####
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+
 #### python setting ####
-" 補完の調子が悪かったら ~/.config/deoplete/jedi/ の中のcacheを削除してみる
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 depends  = ['deoplete.nvim']
