@@ -12,7 +12,7 @@ augroup END
 
 
 " let g:python_host_prog = expand('~/.pyenv/versions/anaconda3-5.0.0/bin/python')
-let g:python3_host_prog = expand('~/.pyenv/versions/anaconda3-5.0.0/bin/python3.6')
+let g:python3_host_prog = expand('~/.pyenv/versions/anaconda3-5.0.0/bin/python3')
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
