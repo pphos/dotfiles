@@ -84,7 +84,6 @@ hook_add = '''
     let g:neoterm_size = '15'
     " start neoterm
     nnoremap <silent> tt :Tnew<CR><C-w>j
-    nnoremap <silent> @p :T python3 %<CR><C-w>j
     " change to command mode
     tnoremap <silent> <esc> <c-\><c-n>
     tnoremap <silent> <c-[> <c-\><c-n>
@@ -111,7 +110,6 @@ hook_add = '''
     nmap <silent> <c-u><c-y> :<C-u>Denite neoyank<CR>
     nmap <silent> <c-u><c-v> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/dotfiles']}])<CR>
 '''
-
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
