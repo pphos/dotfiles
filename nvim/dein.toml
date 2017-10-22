@@ -83,7 +83,8 @@ hook_add = '''
     let g:neoterm_position = 'horizontal'
     let g:neoterm_size = '15'
     " start neoterm
-    nnoremap <silent> tt :Tnew<CR><C-w>j
+    nnoremap <silent> tt :Tnew<CR><C-w>ja
+    nnoremap <silent> tp :T python %<CR><c-w>ja
     " change to command mode
     tnoremap <silent> <esc> <c-\><c-n>
     tnoremap <silent> <c-[> <c-\><c-n>
