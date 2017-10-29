@@ -62,7 +62,7 @@ repo = 'zchee/deoplete-jedi'
 depends  = ['deoplete.nvim']
 on_ft = 'python'
 hook_source = '''
-    let g:deoplete#sources#jedi#server_timeout = 500
+    let g:deoplete#sources#jedi#server_timeout = 150
 '''
 
 #[[plugins]]
@@ -96,7 +96,29 @@ hook_source = '''
     \}
 '''
 
-#### PHP ####
+#### javascript setting #####
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+depends = ['deoplete.nvim']
+on_ft = ['javascript']
+
+#### PHP setting ####
 [[plugins]]
 repo = 'padawan-php/deoplete-padawan'
 depends = ['deoplete.nvim']
