@@ -80,8 +80,7 @@ hook_add = '''
 [[plugins]]
 repo = 'kassio/neoterm'
 hook_add = '''
-    let g:neoterm_position = 'horizontal'
-    let g:neoterm_size = '15'
+    let g:neoterm_default_mod = 'below'
     " start neoterm
     nnoremap <silent> tt :Tnew<CR><C-w>ja
     nnoremap <silent> tp :T python %<CR><c-w>ja
