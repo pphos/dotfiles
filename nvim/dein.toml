@@ -82,11 +82,11 @@ hook_add = '''
     tnoremap <silent> <esc> <c-\><c-n>
     tnoremap <silent> <c-[> <c-\><c-n>
     " hide/close terminal
-    nnoremap <silent> th :call neoterm#close()<CR>
+    nnoremap <silent> th :Ttoggle<CR>
     " clear terminal
-    nnoremap <silent> tl :call neoterm#clear()<CR>
+    nnoremap <silent> tl :Tclear<CR>
     " kills the current job
-    vnoremap <silent> tk :call neoterm#kill()<CR>
+    vnoremap <silent> tk :Tkill<CR>
 '''
 
 [[plugins]]
