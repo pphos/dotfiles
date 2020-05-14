@@ -1,0 +1,134 @@
+{
+    //-------------------------------------
+    // vscodeのeditorの設定
+    //-------------------------------------
+    // 画面端でコードの折り返しを行う
+    "editor.wordWrap": "on",
+    // ミニマップの非表示
+    "editor.minimap.enabled": false,
+    // tabをスペースに置換
+    "editor.insertSpaces": true,
+    // tabのデフォルトをスペース2つに変更
+    "editor.tabSize": 2,
+    // エディタで空白文字を表示する方法を制御
+    "editor.renderWhitespace": "boundary",
+    // エディタでパンくずの設定
+    "breadcrumbs.enabled": true,
+
+
+    //--------------------------------------
+    // vscodeの検索系
+    //--------------------------------------
+    // 検索対象外のディレクトリ
+    "search.exclude": {
+        "**/bower_components": true,
+        "**/vendor": true,
+        "**/env": true,
+        "tags": true,
+        "**/.git": true,
+        "**/.DS_Store": true
+    },
+
+
+    //---------------------------------------
+    // vscodeのfileの設定
+    //---------------------------------------
+    // ファイル保存時に末尾の空白をトリミング
+    "files.trimTrailingWhitespace": true,
+    // ファイル監視から除外するファイル
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.hg/store/**": true
+    },
+
+
+    //-----------------------------------------
+    // vscodeのバージョン管理
+    //-----------------------------------------
+    // ソース管理プロバイダーのセクションを常に表示する
+    "scm.alwaysShowProviders": true,
+
+
+    //-----------------------------------------
+    // vscodeの作業環境設定
+    //-----------------------------------------
+    // エディタのラベル書式の制御
+    // - short: 'parent'
+    // - medium: 'workspace/src/parent'
+    // - long: '/home/user/workspace/src/parent'
+    // - default '.../parent'
+    "workbench.editor.labelFormat": "short",
+    // 任意の表示グループが開かれた場合に, エディタを表示
+    "workbench.editor.revealIfOpen": true,
+    // 開いているエディタをアイコンで表示しない
+    "workbench.editor.showIcons": false,
+    // 編集中のタブをハイライト
+    "workbench.editor.highlightModifiedTabs": true,
+    // エディタのタブの大きさの制御
+    "workbench.editor.tabSizing": "shrink",
+    // 前のセッションからエディタが復元されていない場合に, 起動時に表示しない
+    "workbench.startupEditor": "none",
+    // 現在アクティブになっているエディタとは別個にエディタを開く
+    "workbench.editor.openPositioning": "first",
+    // サイドバーのツリー検索でデフォルトの挙動をoffにする
+    "workbench.list.automaticKeyboardNavigation": false,
+    // ウィンドウに表示するエディタの数を変更
+    "explorer.openEditors.visible": 0,
+
+    //--------------------------------------------
+    // ワンセット
+    // タブの表示
+    "workbench.editor.showTabs": true,
+    // プレビューの表示
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    //--------------------------------------------
+
+
+    //--------------------------------------------
+    // vscodeのdebugの設定
+    //--------------------------------------------
+    // デバッグ中にエディタの行内に変数値を表示
+    "debug.inlineValues": true,
+
+    //--------------------------------------------
+    // vscodeのwindowの設定
+    //--------------------------------------------
+    "window.zoomLevel": 0,
+
+
+    //--------------------------------------------
+    // vscodeのterminalの設定
+    //--------------------------------------------
+    // ターミナルで選択しているテキストをクリップボードにコピー
+    "terminal.integrated.copyOnSelection": true,
+
+
+
+    //--------------------------------------------
+    // installした拡張機能の設定
+    //--------------------------------------------
+
+    //--------------------------------------------
+    // vscode vimの設定
+    //--------------------------------------------
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.ignorecase": true,
+    "vim.incsearch": true,
+    "vim.sneak": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ]
+
+
+
+}

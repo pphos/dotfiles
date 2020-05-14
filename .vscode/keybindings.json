@@ -1,0 +1,51 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+o o",
+        "command": "workbench.action.showCommands"
+    },
+    // Suggestion時
+    {
+        "key": "ctrl+k",
+        "command": "acceptSelectedSuggestion"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    // サイドバーの表示切り替え
+    {
+        "key": "ctrl+shift+v",
+        "command": "workbench.view.explorer",
+        "when": "!explorerViewletVisible && vim.mode != 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode'"
+    },
+    // Emmentをtabで展開
+    {
+        "key": "tab",
+        "command": "editor.emmet.action.expandAbbreviation",
+        "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    // ターミナルの切り替え
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus && vim.mode != 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus && vim.mode != 'SearchInProgressMode'"
+    },
+
+]
