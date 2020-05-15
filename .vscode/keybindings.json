@@ -47,5 +47,46 @@
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminalFocus && vim.mode != 'SearchInProgressMode'"
     },
-
+    // Insert mode中の移動
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "cursorLeft",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "cursorUp",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "cursorDown",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    //----------------------------------------------------------
+    // エディターにフォーカスしている時の設定(editor<->sidebarへの移動)
+    //----------------------------------------------------------
+    // サイドバーへの移動 (ctrl+hをhにしてctrlを話すだけで切り替わる)
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorFocus"
+    },
+    // サイドバーからの移動 (ctrl+hをhにしてctrlを話すだけで切り替わる)
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
+    },
+    // サイドバーからの移動 (ctrl+hをhにしてctrlを話すだけで切り替わる)
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.navigateEditorGroups",
+        "when": "!editorFocus"
+    },
 ]
