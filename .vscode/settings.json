@@ -10,6 +10,12 @@
     "editor.insertSpaces": true,
     // tabのデフォルトをスペース2つに変更
     "editor.tabSize": 2,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[rust]": {
+        "editor.tabSize": 4
+    },
     // エディタで空白文字を表示する方法を制御
     "editor.renderWhitespace": "boundary",
     // エディタでパンくずの設定

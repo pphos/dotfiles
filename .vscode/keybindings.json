@@ -6,29 +6,14 @@
     },
     // Suggestion時
     {
-        "key": "ctrl+k",
-        "command": "acceptSelectedSuggestion"
-    },
-    {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "selectNextSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
     },
     {
-        "key": "ctrl+p",
+        "key": "ctrl+k",
         "command": "selectPrevSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    // サイドバーの表示切り替え
-    {
-        "key": "ctrl+shift+v",
-        "command": "workbench.view.explorer",
-        "when": "!explorerViewletVisible && vim.mode != 'SearchInProgressMode'"
-    },
-    {
-        "key": "ctrl+shift+v",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode'"
     },
     // Emmentをtabで展開
     {
